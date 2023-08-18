@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var attempt=3
+    function validate(){
+        var username= document.getElementById("fullname").value
+        var address= document.getElementById("address").value
+        var father= document.getElementById("faname").value
+        var mother= document.getElementById("mname").value
+        var phone= document.getElementById("pnum").value
+        var email= document.getElementById("email").value
+        var dob= document.getElementById("DOB").value
+        if((username && address && father && mother && phone && email && dob) != "")
+        {
+            window.alert("You Registered Successfully")
+            return false
+        }
+
+        else{
+            window.alert("please fill all the information!")
+
+        }
+
+
+    }
+</script>
+<style>
+body{
+    margin-top: 100px;
+    justify-content: center;
+        display: flex;
+        align-items: center;
+
+}
+
+    div{
+        height:1000px;
+        width: 300px;
+        position: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background: black;
+        color:aliceblue;
+        border:red 12px solid;
+        border-radius: 20px;
+        margin:25px;
+        padding-left: 29px;
+        padding-right: 29px;
+        font-weight: 500;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    }
+
+    input{
+        width: 100%;
+        font-weight: 500;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background-color: transparent;
+        border:none;
+        border-bottom: 5px red solid ;
+        outline:none;
+        color: white;
+        letter-spacing: 2px;
+
+    }
+
+    #submit{
+        background: red;
+        border-radius: 12px;
+        margin-top: 12px;
+        border: white 2px solid;
+        
+    }
+
+    h1{
+        background: red;
+        width: 100%;
+        border-radius: 25%;
+        justify-content: center;
+        display: flex;
+    }
+
+    img{
+        top: -50%;
+        border: white 2px solid;
+    }
+</style>
+
+
+
+<body>
+    <div>
+    <form action="">
+        <img src="https://o.remove.bg/downloads/94d75c8a-5912-4b02-b3db-9fd04595a84a/140-1402739_click-here-to-start-new-student-registration-circle-removebg-preview.png" alt="Registeration">
+        <h1>
+            Registeration Form
+        </h1>
+        <p>name</p>
+        <input type="text" id ="fullname" placeholder="Enter full name">
+        <p>address</p>
+        <input type="address" id ="address" placeholder="Enter address">
+        <p>fathers's name</p>
+        <input type="text" id ="faname" placeholder="Enter father's name">
+        <p>mother's name</p>
+        <input type="text" id ="mname" placeholder="Enter mother's name">
+        <p>Phone number</p>
+        <input type="number" id ="pnum" placeholder="Enter phone number">
+        <p>email address</p>
+        <input type="email" id ="email" placeholder="Enter email">
+        <p>date of birth</p>
+        <input type="date" id ="DOB" placeholder="date of birth">
+
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+
+<input type="button" id="submit" value="submit" onclick="validate()">
+    </form>
+</div>
+</body>
+</html>
